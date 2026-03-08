@@ -12,3 +12,14 @@ BRUTE_FORCE_TIME = 10 #Seconds
 HIGH_TRAFFIC_THRESHOLD = 100 #nPackets
 HIGH_TRAFFIC_TIME = 5 #Seconds
 
+#Suspicious ports to scan, always flag the following:
+SUSPICIOUS_PORTS = [4444, 1337, 31337, 6666, 9999]
+#4444 = Common metasploit reverse shell port
+#1337, 31337 = Historically assossiated with hacking tools (nmap, ADMworm, etc)
+#6666, 9999 = Commonly used in RATs and backdoors
+
+#Network interface to sniff, starting with "lo" for testing but will switch to "eth0" later
+INTERFACE = "lo"
+
+#Log file path
+LOG_FILE = "logs/alerts.log"
